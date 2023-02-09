@@ -1,24 +1,21 @@
+import java.util.List;
+import java.util.Scanner;
+import java.io.*; 
 
-/* Integrantes: Erick Barrera 22934
- *              Jorge Lopez 221038
- *      fecha> 8-02-23
- * 
-*/
 
-public class Principal {
-
+public class Principal{
     public static void main(String[] args) {
-
         Scanner teclado = new Scanner(System.in);
+
 
         Read read = new Read();
         Integer[] numeros = read.VerificarDocumento();
         Aplicacion_Sort aSort = new Aplicacion_Sort(new Controladora());
-
+       
         String menu = "\n1. Gnome Sort. \n2. Merge Sort. \n3. Quick Sort. \n4. Radix Sort.  \n5. Bubble Sort \n6. Salir \nIndica lo que quieres realizar aquí: ";
         System.out.println("\n\t\t\t\t\t***Bienvenido a los diferentes Ordenamientos Sorts ***");
         int opcion = 1;
-
+               
         while(opcion >= 1 && opcion < 6){
             System.out.print(menu);
             try{
@@ -26,9 +23,7 @@ public class Principal {
                 teclado.nextLine();
                 switch(opcion){
                     
-                    /*
-                     * Gnome Sort
-                     */
+                  
                     case 1:{
                         System.out.println("Gnome Sort");
 
@@ -52,9 +47,7 @@ public class Principal {
                         break;                   
                     }
 
-                    /*
-                     * Merge Sort
-                     */
+                  
                     case 2:{
                         for(int i = 10; i <= 5000; i+=499){
                             Integer[] lista = new Integer[i];
@@ -76,9 +69,7 @@ public class Principal {
                         break;    
                     }
     
-                    /*
-                     * Quick Sort
-                     */
+                 
                     case 3:{
                         for(int i = 10; i <= 5000; i+=499){
                             Integer[] lista = new Integer[i];
@@ -100,9 +91,7 @@ public class Principal {
                         break;
                     }
     
-                    /*
-                     * Radix Sort
-                     */
+                   
                     case 4:{
                         for(int i = 10; i <= 5000; i+=499){
                             Integer[] lista = new Integer[i];
@@ -124,9 +113,7 @@ public class Principal {
                         break;
                     }
 
-                    /*
-                     * Bubble Sort
-                     */
+                   
                     case 5:{
                         for(int i = 10; i <= 5000; i+=499){
                             Integer[] lista = new Integer[i];
@@ -150,15 +137,13 @@ public class Principal {
 
                 }
             
-            //Esto es en caso de que el usuario llegue colocar un caracter que no acepta el programa o si no hay datos creados 
             }catch(Exception e){
                 System.out.println("Has ingresado uno o varios caracteres incorrectos o no hay datos existentes, intenta nuevamente");
                 teclado.next();
             }    
 
         }
-
+        
         System.out.println("Gracias por utilizar Nuestro programa, hasta luego...");
     }
-    
 }

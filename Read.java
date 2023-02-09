@@ -1,3 +1,12 @@
+import java.util.Random;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+
 
 /* Integrantes: Erick Barrera 22934
  *              Jorge Lopez 221038

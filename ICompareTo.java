@@ -1,4 +1,4 @@
-public class ICompareTo<T> {
+public interface ICompareTo<T> {
     
     public int Compare(T objeto1, T objeto2);
 }
